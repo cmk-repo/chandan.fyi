@@ -3,19 +3,56 @@
 <head>
     <title>Hello</title>
     <style>
-        html, body {
+        html {
             display: table;
             width: 100%;
             height: 100%;
-            background: #123;
-            margin: 0;
-            padding: 0;
+            background: #000;
+            text-align: center;
+            background-image:
+                linear-gradient(-40deg, #222, transparent, #111),
+                linear-gradient(40deg, #222, transparent, #111),
+                linear-gradient(-40deg, #222, transparent, #111),
+                linear-gradient(40deg, #222, transparent, #111);
+            background-size: 300%;
+            background-position: center;
+            transition: 1s;
         }
         
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            display: table-cell;
+            vertical-align: middle;
+            background: #159;
+            transition: 1s;
+        }
+        
+        body:before {
+            content: '';
+            display: block;
+            height: 200px;
+            width: 200px;
+            border-radius: 100%;
+            background: #ddd;
+            margin: auto;
+            box-shadow: 0 0 50px gold, 0 0 150px gold, inset 0 20px 20px 40px whitesmoke, inset 30px 0 35px 50px ivory;
+            transition: 1s;
+            position: absolute;
+            top: auto;
+            left: 50%;
+            margin-left: -100px;
+            margin-top: -100px;
+        }
+        
+        body:hover:before {
+            box-shadow: 0 0 50px tomato, 0 0 30px orange, inset 0 10px 10px 20px #ddd, inset 30px 0 35px 50px #ccc;
+            background: #aaa;
+            transition: 1s;
+        }
+        
+        html:hover,
+        body:hover {
+            background-color: #123;
+            transition: 1s;
         }
         
         .container {
