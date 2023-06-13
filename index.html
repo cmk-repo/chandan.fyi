@@ -3,92 +3,71 @@
 <head>
     <title>Hello</title>
     <style>
-      html {
-  display:table;
-  width:100%;
-  height:100%;
-  background:#000;
-}
-body {
-  display:table-cell;
-  vertical-align:middle;
-}
-body:before {
-  content:'';
-  display:block;
-  height:200px;
-  width:200px;
-  border-radius:100%;
-  background :#ddd;
-  margin:auto;
-  box-shadow:0 0 50px gold,0 0 150px gold, inset 0 20px 20px 40px whitesmoke, inset 30px 0 35px 50px ivory;
-  transition:1s;
-  position:absolute;
-  top:auto;
-  left:50%;
-  margin-left:-100px;
-  margin-top:-100px;
-}
-body:hover:before {
-box-shadow:0 0 50px tomato,0 0 30px orange, inset 0 10px 10px 20px #ddd, inset 30px 0 35px 50px #ccc;
-  background:#aaa;
-  transition:1s;
-}
-html , body {
-background:#159;
-text-align:center;
-background-image:
-linear-gradient(-40deg,#222,transparent,#111), 
-linear-gradient(40deg,#222,transparent,#111), 
-linear-gradient(-40deg,#222,transparent,#111),
-linear-gradient(40deg,#222,transparent,#111)
-;
-  background-size:300%;
-  background-position:center;
-  transition:1s;
-}
-html:hover,body:hover {background-color:#123;transition:1s;}
+        html, body {
+            display: table;
+            width: 100%;
+            height: 100%;
+            background: #123;
+            margin: 0;
+            padding: 0;
+        }
+        
         body {
-            background-color: #440066; /* Dark purple background color */
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
         }
         
         .container {
-            position: relative;
             text-align: center;
-            color: #ffffff; /* White text color */
+            color: #ffffff;
             font-size: 30px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
         
+        .container:before {
+            content: '';
+            display: block;
+            height: 200px;
+            width: 200px;
+            border-radius: 100%;
+            background: #ddd;
+            margin: auto;
+            box-shadow: 0 0 50px gold, 0 0 150px gold, inset 0 20px 20px 40px whitesmoke, inset 30px 0 35px 50px ivory;
+            transition: 1s;
+        }
+        
+        .container:hover:before {
+            box-shadow: 0 0 50px tomato, 0 0 30px orange, inset 0 10px 10px 20px #ddd, inset 30px 0 35px 50px #ccc;
+            background: #aaa;
+            transition: 1s;
+        }
         
         .name-email {
-            margin-top: 40px;
+            margin-top: 20px;
         }
         
         .button {
-            margin-top: 40px;
+            margin-top: 20px;
         }
         
         .button a {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #ffffff; /* White button background color */
-            color: #440066; /* Dark purple button text color */
+            background-color: #ffffff;
+            color: #440066;
             border-radius: 30px;
             text-decoration: none;
-            
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="circle"></div>
+        <h1>Coming Soon.....</h1>
         <div class="name-email">
-            <h1>Coming Soon.....</h1>
             <h2>Contact me at contact@chandan.fyi</h2>
         </div>
         <div class="button">
